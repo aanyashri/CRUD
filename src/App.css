@@ -1,0 +1,264 @@
+:root {
+  --primary: #4a90e2; 
+  --secondary: #50b2c0; 
+  --success: #28a745; 
+  --danger: #e63946; 
+  --dark: #2c3e50; 
+  --grey-light: #f8f9fa; 
+  --border: #dee2e6; 
+  --background: #f5f7fa; 
+  --card: #ffffff; 
+  --hover: #e4f0f9; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
+  color: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+}
+.form-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--grey-light);
+  padding-bottom: 1rem;
+}
+
+.form-title {
+  font-size: 2.2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.form-subtitle {
+  color: var(--secondary);
+  font-size: 1rem;
+}
+
+
+.form-section {
+  background: var(--grey-light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--card);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #357ab9;
+  box-shadow: 0 6px 15px rgba(74, 144, 226, 0.3);
+}
+
+.btn-secondary {
+  background: var(--card);
+  color: var(--dark);
+  border: 2px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--hover);
+  color: var(--primary);
+}
+
+.user-list-container {
+  margin-top: 2rem;
+  background: var(--grey-light);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.user-list-title {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.user-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-list .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-list .user-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.user-list .user-details {
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.user-list .user-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.user-list .btn-edit {
+  background: var(--secondary);
+  color: white;
+}
+
+.user-list .btn-edit:hover {
+  background: #3d99a8;
+}
+
+.user-list .btn-delete {
+  background: var(--danger);
+  color: white;
+}
+
+.user-list .btn-delete:hover {
+  background: #c81e29;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .user-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-list .user-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .user-list .user-actions button {
+    width: 100%;
+    text-align: center;
+  }
+}
